@@ -18,3 +18,8 @@ Seguimos practicando.
 * git remote remove origin
 * git push
 * git pull
+* git checkout ejemplo
+* git checkout -b ejemplo
+* git switch -c ejemplo2
+* git switch ejemplo 2
+* git merge ejemplo2
