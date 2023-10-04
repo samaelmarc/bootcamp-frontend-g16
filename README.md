@@ -3,6 +3,7 @@
 Este repositorio nos sirve para aprender el flujo de trabajo de git  y github.
 Seguimos practicando.
 ###
+
 * git status
 * git add index.html
 * git commit -m "Mi primera página"
