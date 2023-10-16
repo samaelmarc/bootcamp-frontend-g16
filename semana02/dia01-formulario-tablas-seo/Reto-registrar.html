@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto: Formulario de registro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 </head>
 <body>
+    <main class="container">
+    <h1>FORMULARIO registro</h1>
+        nombres
+        email
+        telefono
+        password
+        password
+        <form>
+            <label>
+                <h4>Nombre</h4>
+                <input type="text" name="nombre" minlength="3" maxlength="15" required />
+            </label>
+
+            <label>
+                <h4>Email</h4>
+                <input type="email" name="email" required />
+            </label>
+            <label>
+                <h4>Password</h4>
+                <input type="password" placeholder="Contraseña" name="password" minlength="6" maxlength="15" required />
+            </label>
+            <label>
+                <h4>Repita Password</h4>
+                <input type="password" placeholder="Repita contraseña" name="password" minlength="6" maxlength="15" required />
+            </label>
+            <label>
+                <h4>Telefono</h4>
+                <input type="tel" name="email" required placeholder="+51 999999999" pattern="\+[0-9]{2} [0-9]{9}" />
+            </label>
+            <input type="submit" value="Guardar"/>
+        </form>
+        
+    </main>
     <!--Todo:Crear un formulario para crear una cuenta de usuario con los campos; nombres, email,telefono,password,confirmar password(caja de texto), si te gustan pueden agregar mas campos. Y opcionalmente pueden usar el frameword pico que vimos en clases -->
 </body>
 </html>
