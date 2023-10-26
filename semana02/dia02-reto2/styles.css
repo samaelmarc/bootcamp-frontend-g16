@@ -61,27 +61,32 @@ main{
     font-weight: 500;
     line-height: 1.5;
 }
-.content ul{
+.content h3{
     font-family: 'Roboto', sans-serif;
     color: hsl(234, 29%, 20%);
+    font-size: 16px;
     font-weight: 500;
     line-height: 0;
+
+    
 }
-.content list{
-    display: flex;
-    padding: 14px;
-}
-.content label{
+
+.content h2{
     font-family: 'Fraunces', serif;
     display:flex;
-    padding: 14px;
-   
+    padding-top: 10px;
+    font-size: small;
+    text-align: left;
 }
 .content input{
     font-family: 'Montserrat', sans-serif;
     width:320px;
     height: 30px;
     border-radius: 14 14 14 14;
+}
+.content input:hover{
+    border-style:groove;
+    /*No logre encontrar ese efecto de la linea*/
 }
 
 .content button{
@@ -96,6 +101,7 @@ main{
     border-radius: 7px;
     margin-top: 20px;
     cursor: pointer;
+    width:329px;
 }
 .content button:hover{/*cambia el color del puntero al pasar sobre el boton*/
     background-color:hsl(4, 80%, 54%);
