@@ -19,4 +19,27 @@ main{
   background-color: aqua;
   width: 600px;
   height: 400px;
+  display: flex;/*ordena los bloques segun su clase padre main*/
 }
+.photo {
+background-color: blue;
+/*width: 50%;*/
+width: 280px;
+/*height: 100px;*/
+background-image: url(./images/image-product-desktop.jpg);
+background-size: cover;/*ocupada todo el espacio*/
+background-repeat: no-repeat;/*para que nos e repita la imagen si se reduce su tamaño*/
+}
+.content {
+background-color: bisque;
+width: 260px;
+padding: 28px;/*es el espacio interno del bloque , la separacion de los objetos con la caja*/
+}
+.content h3{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 7px;
+  color:hsl(228,12%, 48%);
+}
+
