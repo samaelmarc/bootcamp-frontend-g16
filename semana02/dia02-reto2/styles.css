@@ -6,11 +6,6 @@ font-family: 'Fraunces', serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif;
 */
-/*
-font-family: 'Fraunces', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif;
-*/
 body{
     background-color: hsl(234, 29%, 20%);
     font-size: 14px;
@@ -56,12 +51,14 @@ content h1{
     color: hsl(234, 29%, 20%);
 }
 .content p{
+    font-family: 'Roboto', sans-serif;
     color: hsl(234, 29%, 20%);
     font-weight: 500;
     line-height: 1.5;
 }
 .content ul{
-    color:red;
+    font-family: 'Roboto', sans-serif;
+    color: hsl(234, 29%, 20%);
     font-weight: 500;
     line-height: 1.5;
 }
