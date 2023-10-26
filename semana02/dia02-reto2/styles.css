@@ -18,8 +18,8 @@ body{
     
 }
 main{
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 550px;
     background-color:hsl(0, 0%, 100%);
     min-height: 400px;/*hace que el contenido se agrande hasta 500 luego solo muestra espacio en blanco*/
     display: flex;/*ordena los bloques segun su clase padre main*/
@@ -62,3 +62,34 @@ content h1{
     font-weight: 500;
     line-height: 1.5;
 }
+.content list{
+    display: flex;
+    padding: 14px;
+}
+.content label{
+    font-family: 'Fraunces', serif;
+    display:flex;
+    padding: 14px;
+}
+.content input{
+    font-family: 'Montserrat', sans-serif;
+    width:320px;
+    height: 30px;
+    border-radius: 14 14 14 14;
+}
+.content button{
+    border: 0;
+    font-family: 'Fraunces', serif;    font-weight: 700;
+    background-color:hsl(235, 18%, 26%);
+    color: hsl(0, 0%, 100%);
+    padding:14px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 7px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.content button:hover{/*cambia el color del puntero al pasar sobre el boton*/
+    background-color:hsl(4, 80%, 54%);
+  }
