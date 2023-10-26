@@ -17,8 +17,8 @@ body{
 }
 main{
   background-color: aqua;
-  width: 600px;
-  height: 400px;
+  width: 560;
+  height: 500px;
   display: flex;/*ordena los bloques segun su clase padre main*/
 }
 .photo {
@@ -42,4 +42,41 @@ padding: 28px;/*es el espacio interno del bloque , la separacion de los objetos 
   letter-spacing: 7px;
   color:hsl(228,12%, 48%);
 }
-
+content h1{
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color:hsl(212, 21%, 14%)
+}
+.content p{
+  color:hsl(228,12%, 48%);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.content div{
+  display: flex;
+  align-items: center;
+  gap: 14px;/*espaciado de los elementos dentro de la caja*/
+}
+.content span{
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%)
+}
+.content s{
+  color:hsl(228,12%, 48%);
+}
+.content button{
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  padding:14px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 7px;
+  margin-top: 20px;
+  cursor: pointer;
+}
