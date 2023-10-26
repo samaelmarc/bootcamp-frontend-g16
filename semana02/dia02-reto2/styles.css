@@ -19,6 +19,7 @@ body{
     width: 600vh;
     display: flex;/*separa el body del main*/
     align-items: center;
+
     
 }
 main{
@@ -46,11 +47,21 @@ main{
 .content{
     font-weight: 500;
     font-size: 16px;
-    color: hsl(234, 29%, 20%)
+    color: hsl(234, 29%, 20%);
 }
 content h1{
     font-weight: 500;
-    font: size 16px;
-
-    color: hsl(234, 29%, 20%)
+    font-size: 16px;
+    font-weight:100;
+    color: hsl(234, 29%, 20%);
+}
+.content p{
+    color: hsl(234, 29%, 20%);
+    font-weight: 500;
+    line-height: 1.5;
+}
+.content ul{
+    color:red;
+    font-weight: 500;
+    line-height: 1.5;
 }
