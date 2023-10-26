@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+body{
+    background-color: hsl(234, 29%, 20%);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 600vh;
+    display: flex;/*separa el body del main*/
+    align-items: center;
+    
+}
+main{
+    width: 500px;
+    height: 400px;
+    background-color:hsl(0, 0%, 100%);
+    min-height: 400px;/*hace que el contenido se agrande hasta 500 luego solo muestra espacio en blanco*/
+    display: flex;/*ordena los bloques segun su clase padre main*/
+    margin-right: 200px;
+
+}
+.photo{
+
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;/*ocupada todo el espacio*/
+    background-repeat: no-repeat;/*para que nos e repita la imagen si se reduce su tamaño*/
+    position: relative;
+    border-radius: 14px 14px 0 0;
+    left: 100%;/*deplaza la imagen*/
+    top: 10%;
+    flex-flow: row;
+    width: 80%;
+    height: 90%;
+}
+.content{
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(234, 29%, 20%)
+}
+content h1{
+    font-weight: 500;
+    font: size 16px;
+
+    color: hsl(234, 29%, 20%)
+}
