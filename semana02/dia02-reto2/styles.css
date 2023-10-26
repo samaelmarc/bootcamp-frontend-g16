@@ -11,42 +11,43 @@ body{
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
-    width: 600vh;
     display: flex;/*separa el body del main*/
     align-items: center;
-
-    
 }
 main{
-    width: 400px;
-    height: 550px;
+    width: 850px;
+    height: 500px;
+    padding-left: 50px;
     background-color:hsl(0, 0%, 100%);
     min-height: 400px;/*hace que el contenido se agrande hasta 500 luego solo muestra espacio en blanco*/
     display: flex;/*ordena los bloques segun su clase padre main*/
     margin-right: 200px;
-
+    position: absolute;
+   
 }
 .photo{
-
     background-image: url(./assets/images/illustration-sign-up-desktop.svg);
     background-size: cover;/*ocupada todo el espacio*/
     background-repeat: no-repeat;/*para que nos e repita la imagen si se reduce su tamaño*/
-    position: relative;
-    border-radius: 14px 14px 0 0;
+    border-radius: 14px 14px 14px 14px;
     left: 100%;/*deplaza la imagen*/
-    top: 10%;
+    margin-top: 55px;
+    position: relative;
     flex-flow: row;
     width: 80%;
     height: 90%;
+    bottom:490px;
+    
 }
 .content{
     font-weight: 500;
     font-size: 16px;
     color: hsl(234, 29%, 20%);
 }
-content h1{
-    font-weight: 500;
-    font-size: 16px;
+.content h1{
+    font-family: 'Fraunces', serif;
+    font: weight 16px;;
+    font-size: 36px;
     font-weight:100;
     color: hsl(234, 29%, 20%);
 }
@@ -70,6 +71,7 @@ content h1{
     font-family: 'Fraunces', serif;
     display:flex;
     padding: 14px;
+   
 }
 .content input{
     font-family: 'Montserrat', sans-serif;
