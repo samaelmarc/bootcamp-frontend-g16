@@ -16,9 +16,9 @@ body{
   align-items: center;
 }
 main{
-  background-color: aqua;
+  /*background-color: aqua;*/
   width: 560;
-  height: 500px;
+  min-height: 500px;/*hace que el contenido se agrande hasta 500 luego solo muestra espacio en blanco*/
   display: flex;/*ordena los bloques segun su clase padre main*/
 }
 .photo {
@@ -29,11 +29,14 @@ width: 280px;
 background-image: url(./images/image-product-desktop.jpg);
 background-size: cover;/*ocupada todo el espacio*/
 background-repeat: no-repeat;/*para que nos e repita la imagen si se reduce su tamaño*/
+border-radius: 14px 0 0 14px;
+box-shadow: 1px 1px 3px #ccc;/*sombra en la foto parte inferior*/
 }
 .content {
-background-color: bisque;
+background-color: hsl(0, 0%, 100%);
 width: 260px;
 padding: 28px;/*es el espacio interno del bloque , la separacion de los objetos con la caja*/
+border-radius: 0 14px 14px 0;
 }
 .content h3{
   text-transform: uppercase;
@@ -71,7 +74,8 @@ content h1{
   border: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: hsl(158, 36%, 37%);
+  background-color: hsl(158, 36%, 37%);;
+  color: hsl(0, 0%, 100%);
   padding:14px;
   display: flex;
   justify-content: center;
