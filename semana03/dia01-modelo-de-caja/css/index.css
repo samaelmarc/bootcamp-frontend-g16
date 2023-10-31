@@ -14,26 +14,33 @@ font-family: 'Raleway', sans-serif;
     --font-weight-regular:400;
     --font-weight-bold:700;
     /*COLOR*/
-
     /*### Primary*/
-
     --primary-dark-blue-intro:hsl(217, 28%, 15%);
     --primary-dark-blue-main:hsl(218, 28%, 13%);
     --primary-dark-blue-footer:hsl(216, 53%, 9%);
     --primary-dark-blue-tertimonials:hsl(219, 30%, 18%);
-
     /*### Accent*/
-
     --accent-cyan: hsl(176, 68%, 64%);
     --accent-blue: hsl(198, 60%, 50%);
     --accent-light-red: hsl(0, 100%, 63%);
-
     /*### Neutral*/
-
     --neutral-White: hsl(0, 0%, 100%);
-
 }
+/*RESETs para que sea compatible con cualquier navegador
+se usa el selector universal* pora tener las cajas de una sola medida y 
+inicializadas en un solo valor*/
+*{
+ /*aplica todos los css*/
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    font-size :var(var(--font-size));
+}
+
 body{
     /*forma de hacer el llamadode una variable global var(--color)*/
-    background-color: var(--color);
+    background-color: var(--primary-dark-blue-intro);
+    color:var(--neutral-White);
+
 }
