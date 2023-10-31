@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
 /*
 font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
 /*custom property*/
-:root{
+:root {
     /* FONTS*/
     /*creamos una variable global--variable*/
-    --color:yellow;
-    --font-primary:'Raleway',sans-serif;
-    --font-secondary:'Open Sans',sans-serif;
-    --font-size:14px;
-    --font-weight-regular:400;
-    --font-weight-bold:700;
+    --color: yellow;
+    --font-primary: 'Raleway', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    --font-size: 14px;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
     /*COLOR*/
     /*### Primary*/
-    --primary-dark-blue-intro:hsl(217, 28%, 15%);
-    --primary-dark-blue-main:hsl(218, 28%, 13%);
-    --primary-dark-blue-footer:hsl(216, 53%, 9%);
-    --primary-dark-blue-tertimonials:hsl(219, 30%, 18%);
+    --primary-dark-blue-intro: hsl(217, 28%, 15%);
+    --primary-dark-blue-main: hsl(218, 28%, 13%);
+    --primary-dark-blue-footer: hsl(216, 53%, 9%);
+    --primary-dark-blue-tertimonials: hsl(219, 30%, 18%);
     /*### Accent*/
     --accent-cyan: hsl(176, 68%, 64%);
     --accent-blue: hsl(198, 60%, 50%);
@@ -26,52 +27,105 @@ font-family: 'Raleway', sans-serif;
     /*### Neutral*/
     --neutral-White: hsl(0, 0%, 100%);
 }
+
 /*RESETs para que sea compatible con cualquier navegador
 se usa el selector universal* pora tener las cajas de una sola medida y 
 inicializadas en un solo valor*/
-*{
- /*aplica todos los css*/
+* {
+    /*aplica todos los css*/
     box-sizing: border-box;
     margin: 0;
 }
-html{
-    font-size :var(var(--font-size));
+
+html {
+    font-size: var(var(--font-size));
 }
 
-body{
+body {
     /*forma de hacer el llamadode una variable global var(--color)*/
     background-color: var(--primary-dark-blue-intro);
-    color:var(--neutral-White);
+    color: var(--neutral-White);
 }
-a{
+
+a {
     /*toma ( inherit) el color por defecto del padre "body"*/
     color: inherit;
-    text-decoration: none;/*quita el subrayado*/
+    text-decoration: none;
+    /*quita el subrayado*/
 }
-img{
+
+img {
     /*TODO:RWD para imagenes*/
 }
+
 /*creamos un contenedor para header*/
-.wrapper{
+.wrapper {
     /*todo adaptamos el ancho de la pagina a navegadores pc*/
     width: 1440px;
     /*adaptamos el ancho a paginas mobiles*/
 }
-.header{
-    border: 1px solid red;
+
+.header {
+   /* border: 1px solid red;*/
     font-family: var(--font-primary);
-    margin:0 auto;/*al poner el margen a cero y auto  termina poniendose al medio la caja*/
-    display: flex;/* pone los elementos uno al lado del otro*/
-    justify-content: space-between;/*mueve el ultimo elemento de manera horizontala la derecha*/
-    margin-top: 2rem ;/*(1rem = 16px)agregamos espaciado externo de la capa header usamos
-    rem basado en la unidad de medida de la letra que se usa 14px = 1rem pero
-    como ya esta declarado el valor en la variable font*/  
-}
-.header_nav{
-    border: 1px solid yellow;
-    list-style: none;/*quitamos redondo de la lista*/
-    padding: 10px;/*tamaño de la caja*/
-    margin: 10px;/*separacion del margen de las cajas*/
+    margin: 0 auto;
+    /*al poner el margen a cero y auto  termina poniendose al medio la caja*/
     display: flex;
-    gap:3rem;/*pone espaciado en los elementos*/
+    /* pone los elementos uno al lado del otro*/
+    justify-content: space-between;
+    /*mueve el ultimo elemento de manera horizontala la derecha*/
+    margin-top: 2rem;
+    /*(1rem = 16px)agregamos espaciado externo de la capa header usamos
+    rem basado en la unidad de medida de la letra que se usa 14px = 1rem pero
+    como ya esta declarado el valor en la variable font*/
+}
+
+.header_nav {
+    /*border: 1px solid yellow;*/
+    list-style: none;
+    /*quitamos redondo de la lista*/
+    padding: 10px;
+    /*tamaño de la caja*/
+    margin: 10px;
+    /*separacion del margen de las cajas*/
+    display: flex;
+    gap: 3rem;
+    /*pone espaciado en los elementos*/
+}
+.hero{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;/*pone los elementos debajo de cada uno*/
+    align-items: center;/*pone los items al centro*/
+    gap: 2rem;
+    padding-top: 3rem;/*espacio entre la imagen y el margen*/
+    padding-bottom: 12rem;
+}
+.hero__title{
+    width: 720px;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.hero__text{
+    width: 720px;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    text-align: center;
+}
+.hero__button{
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    border: 0;
+    border-radius: 7rem;
+    padding: 1rem 1.5rem;
+    min-width: 220px;/*indica que el boton va tener un ancho minimo*/
+    background:/*otro tipo de fondo personalizado*/
+        linear-gradient(
+            90deg/*degradientes aplicando un angulo de los colores*/
+            var(--accent-cyan) 0%
+            var(--accent-blue)35%
+        );
 }
