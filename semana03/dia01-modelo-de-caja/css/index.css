@@ -42,5 +42,26 @@ body{
     /*forma de hacer el llamadode una variable global var(--color)*/
     background-color: var(--primary-dark-blue-intro);
     color:var(--neutral-White);
+}
+a{
+    /*toma ( inherit) el color por defecto del padre "body"*/
+    color: inherit;
+    text-decoration: none;/*quita el subrayado*/
+}
+img{
+    /*TODO:RWD para imagenes*/
+}
+/*creamos un contenedor para header*/
+.wrapper{
+    /*todo adaptamos el ancho de la pagina a navegadores pc*/
+    width: 1440px;
+    /*adaptamos el ancho a paginas mobiles*/
+}
+.header{
+    border: 1px solid red;
+    font-family: var(--font-primary);
+    margin:0 auto;/*al poner el margen a cero y auto  termina poniendose al medio la caja*/
+    display: flex;/* pone los elementos uno al lado del otro*/
+    justify-content: space-between;/*mueve el ultimo elemento de manera horizontala la derecha*/
 
 }
