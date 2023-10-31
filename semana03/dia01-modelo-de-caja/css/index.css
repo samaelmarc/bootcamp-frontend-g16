@@ -93,7 +93,7 @@ img {
     /*pone espaciado en los elementos*/
 }
 .hero{
-    border: 1px solid red;
+
     display: flex;
     flex-direction: column;/*pone los elementos debajo de cada uno*/
     align-items: center;/*pone los items al centro*/
@@ -124,8 +124,16 @@ img {
     min-width: 220px;/*indica que el boton va tener un ancho minimo*/
     background:/*otro tipo de fondo personalizado*/
         linear-gradient(
-            90deg/*degradientes aplicando un angulo de los colores*/
-            var(--accent-cyan) 0%
+            90deg, /*degradientes aplicando un angulo de los colores*/
+            var(--accent-cyan) 0%,
             var(--accent-blue)35%
-        );
+        )
+    ;
+}
+.features{
+    display: grid;/*trabajar en cuadricula*/
+    grid-template-columns: 340px 340px;
+    justify-content: center;
+    gap:5rem;
+    background-color: var(--primary-dark-blue-main);
 }
