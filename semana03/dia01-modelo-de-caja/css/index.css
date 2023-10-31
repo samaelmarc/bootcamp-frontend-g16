@@ -63,5 +63,15 @@ img{
     margin:0 auto;/*al poner el margen a cero y auto  termina poniendose al medio la caja*/
     display: flex;/* pone los elementos uno al lado del otro*/
     justify-content: space-between;/*mueve el ultimo elemento de manera horizontala la derecha*/
-
+    margin-top: 2rem ;/*(1rem = 16px)agregamos espaciado externo de la capa header usamos
+    rem basado en la unidad de medida de la letra que se usa 14px = 1rem pero
+    como ya esta declarado el valor en la variable font*/  
+}
+.header_nav{
+    border: 1px solid yellow;
+    list-style: none;/*quitamos redondo de la lista*/
+    padding: 10px;/*tamaño de la caja*/
+    margin: 10px;/*separacion del margen de las cajas*/
+    display: flex;
+    gap:3rem;/*pone espaciado en los elementos*/
 }
