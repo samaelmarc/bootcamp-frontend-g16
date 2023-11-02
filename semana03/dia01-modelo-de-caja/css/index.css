@@ -54,15 +54,20 @@ a {
     /*quita el subrayado*/
 }
 
-img {
+img {/* importante para que se adapten a todos los dispositivos por la pantalla*/
     /*TODO:RWD para imagenes*/
+    max-width: 100%;/*a todas las imagenes vas a ponerle un 100% al ancho del contenedor para que se adapte al dismunir el zoom*/
+    height: auto;
 }
 
 /*creamos un contenedor para header*/
 .wrapper {
     /*todo adaptamos el ancho de la pagina a navegadores pc*/
-    width: 1440px;
+    /*width: 1440px;*/
     /*adaptamos el ancho a paginas mobiles*/
+    /*aplicamos una funcion mas optima para el wrapper width: 1440px */
+    width:min(100% - 3rem, 1440px) ;
+    /*crea una propiedad que agerga un padding de 3 rem para que no se distorcione la pagina por otros dispositivos*/
 }
 
 .header {
@@ -108,18 +113,32 @@ img {
 
 }
 .hero__title{
-    width: 720px;
+    /*width: 720px; aplicando la funcion para optimizar la pag por el tamaño de la pantalla*/
+    width: min(100% - 3rem,720px);
     font-family: var(--font-primary);
     font-weight: var(--font-weight-bold);
     font-size: 2.5rem;
     text-align: center;
 }
 .hero__text{
-    width: 720px;
+    /*width: 720px;*/
+    width: min(100% - 3rem,720px);
     font-family: var(--font-secondary);
     font-size: 1.2rem;
-    padding: 0.7rem;
+    padding: 0 7rem;
     text-align: center;
+}
+/*aplicar tipo de media query, solo para dispositivos que tenga un tamaño menor de 768 se aplica un padding de 0*/
+/*
+576px --> pantallas pequeñas celulares
+768px --> pantallas pequeñas tablets y celulares
+992px --> pantallas medianas desktop
+1200px --> pantallas grandes desktop tvs
+*/
+@media(max-with:768px){
+    .hero__text{
+        padding: 0;
+    }
 }
 .hero__button{
     font-family: var(--font-primary);
@@ -151,6 +170,12 @@ img {
     align-items: center ;/*prpoiedad para cambiar la posicion de elementos verticales*/
     gap: 1rem;
 }
+/* si son pantallas de celulares/tables convierte el feature en una sola colmna*/
+@media(max-with:768px){
+    .features{
+        grid-template-columns: 340px;
+    }
+}
 .feature__title{
     font-family: var(--font-primary);
     /*border: 1px solid red;*/
@@ -169,6 +194,12 @@ img {
 
     background-color: var(--primary-dark-blue-main);
     padding-top: 8rem;
+}
+/*transpone todo en una columna solo para celulares/tables*/
+@media(max-with:768px){
+    .collaboration{
+        flex-direction: column;
+    }
 }
 .how_works{
     display: flex;
@@ -203,6 +234,13 @@ img {
     gap: 2rem;
     justify-content: center;
     padding-top: 8rem;
+    padding-bottom: 18rem;
+}
+/*solo para celulares /table*/
+@media(max-with:768px){
+    .testimonials{
+        flex-direction: column;
+    }
 }
 .testimonial{
     background-color: var(--primary-dark-blue-testimonials);
@@ -237,6 +275,10 @@ img {
     flex-direction: column;
     align-items: center;
     gap:1.5rem ;
+    position: absolute;/*para que se posicione y se puede mover */
+    top:0;
+    left: 50%;
+    transform: translate(-50%,-50%);/*mover el elemento para centrar mejor*/
 }
 
 .early--access h2{
@@ -248,6 +290,16 @@ img {
 .early--access form{
     display: flex;
     gap: 2rem;
+}
+/*solo para celulares tables*/
+@media(max-with:768px){
+    .early--access {
+        width: 100%;
+        padding: 0 3rem;
+    }
+    .early--access form{
+        flex-direction: column;
+    }
 }
 .early--access input[type=text]{/*seleccionando al atributo de la clase input text"[]"*/
     border-radius: 1.5rem;
@@ -275,6 +327,7 @@ img {
     font-family: var(--font-primary);
     background-color: var(--primary-dark-blue-footer);
     padding: 15rem 0 5rem 0;
+    position: relative;/*se usa para enganchar otra caja para que se valla posicionando*/
 }
 .footer--wrapper{
     display: flex;
@@ -287,6 +340,14 @@ img {
 .footer-info{
     display: flex;
     gap: 4rem;
+    width: 100%;
+    justify-content: space-between;/*distribuye todo el espacio de la caja con el contenido*/
+}
+/*solo para dispositvos pqueños pone uno debbajo del otro*/
+@media(max-with:768px){
+    .footer-info{
+        flex-direction: column;
+    }
 }
 .footer-info__description{
     width: 22rem;
