@@ -46,6 +46,7 @@ a{
 img{
 
 }
+/*bloque 1*/
 .wrapper {
     /*todo adaptamos el ancho de la pagina a navegadores pc*/
     /*width: 1440px;*/
@@ -73,23 +74,19 @@ img{
     flex-direction: column;
     gap: 2rem;
     padding: 8rem 0 10rem 0rem;/*espacio entre la imagen y el margen*/
-    background-image: url(../images/bg-curvy-desktop);/*mientras no tenga espacio se puede declarar sin comillas*/
-    background-repeat: no-repeat;/*no repetir la imagen*/
-    background-position:bottom ;
-    background-size:contain ;/*la imagen  se adapte al espacio disponible*/
     text-align:left;
     width: 42.5rem;
     height: 40rem;
-    border:1px solid red;
+   /* border:1px solid red;*/
     margin-top: 4rem;
 }
 /*******/
 .hero__image{
     margin-top: 4rem;
     float: right;
-    width: 35;
+    width: 35rem;
     height: 35rem;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .hero__title{
     /*width: 720px; aplicando la funcion para optimizar la pag por el tamaño de la pantalla*/
@@ -115,7 +112,7 @@ img{
 .hero input[type=text]{
     border-radius: 0.2rem;
     border:1px solid var(--primary-very-dark-blue);
-    padding: 1rem 2rem;
+    padding: 1rem 7rem 1rem 1rem;
     min-width: 5rem;
     margin-right: 1rem;
     
@@ -125,14 +122,42 @@ img{
     font-weight: var(--font-weight-bold);
     border: none;
     border-radius: 0.3rem;
-    padding: 1rem 4rem;
+    padding: 1rem 4.5rem;
     min-width:120px;
     color: var(--neutral-light-grayish-blue);
-    background:
-        linear-gradient(
-            90deg,
-            var(--accent-moderate-cyan) 0%,
-            var(--accent-bright-blue)35%
-        )
-    ;
+    background:var(--accent-bright-blue);
+}
+/*bloque 2*/
+.collaboration{
+    display: flex;
+    justify-content: center;/*centrado horizontal*/
+    align-items: center;/*centrado vertical*/
+    gap: 4rem;
+    background-color: var(--neutral-light-grayish-blue);
+    padding-top: 8rem;
+    width: auto;
+    background-image: url(../images/bg-curve-desktop.svg);/*mientras no tenga espacio se puede declarar sin comillas*/
+    background-repeat: no-repeat;/*no repetir la imagen*/
+    background-position:bottom ;
+    background-size:contain ;
+}
+.collaboration__image{
+    
+    float: right;
+    width: 40rem;
+    height: 35rem;
+}
+.how_works{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30rem;
+}
+.how_works__title{
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+}
+.how_works__text{
+    font-family: var(--font-secondary); 
 }
