@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+:root{
+    /* FONTS*/
+    /*creamos una variable global--variable*/
+    /*fuente letra peso tamaño*/
+    /*--color:red;*/
+    --font-primary: 'Open Sans', sans-serif;;
+    --font-secondary: 'Raleway', sans-serif;
+    --font-size: 16px;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    /*COLOR*/
+    /*### Primary*/
+    --primary-very-dark-blue: hsl(243, 87%, 12%);
+    --primary-desaturated-blue: hsl(238, 22%, 44%);
+    /*### Accent*/
+    --accent-bright-blue: hsl(224, 93%, 58%);
+    --accent-moderate-cyan: hsl(170, 45%, 43%);
+    /*### Neutral*/
+    --neutral-light-grayish-blue: hsl(240, 75%, 98%);
+    --neutral-light-gray:hsl(170, 45%, 43%);
+}
+/*inicializamos todos los valores en cero para una mejor maquetacion*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    font-size: var(var(--font-size));
+}
+body{
+    background-color: var(--primary-desaturated-blue);
+    color: var(--neutral-light-grayish-blue);
+}
+a{
+    /*toma el color de la clase padre*/
+    color: inherit;
+    text-decoration: none;
+}
+/*aqui se agregan valores para que se adapten a cualquier dispositivo*/
+img{
+
+}
+.wrapper {
+    /*todo adaptamos el ancho de la pagina a navegadores pc*/
+    /*width: 1440px;*/
+    /*adaptamos el ancho a paginas mobiles*/
+    /*aplicamos una funcion mas optima para el wrapper width: 1440px */
+    width:min(100% - 3rem, 1440px) ;
+    /*crea una propiedad que agerga un padding de 3 rem para que no se distorcione la pagina por otros dispositivos*/
+}
+
+.header {
+    font-family: var(--font-primary);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+}
+.header_nav {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    gap: 3rem;
+}
+.hero{
+    display: flex;
+    align-items:center;/*pone los items al centro*/
+    gap: 2rem;
+    padding-top: 3rem;/*espacio entre la imagen y el margen*/
+    padding-bottom: 12rem;
+    background-image: url(../images/bg-curvy-desktop);/*mientras no tenga espacio se puede declarar sin comillas*/
+    background-repeat: no-repeat;/*no repetir la imagen*/
+    background-position:bottom ;
+    background-size:contain ;/*la imagen  se adapte al espacio disponible*/
+}
+/*******/
+.hero__title{
+    /*width: 720px; aplicando la funcion para optimizar la pag por el tamaño de la pantalla*/
+    width: min(100% - 3rem,720px);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.hero__text{
+    /*width: 720px;*/
+    width: min(100% - 3rem,720px);
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    padding: 0 7rem;
+    text-align: center;
+}/******/

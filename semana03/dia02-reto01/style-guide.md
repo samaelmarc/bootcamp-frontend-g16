@@ -33,7 +33,6 @@ The designs were created to the following widths:
 ### Fonts
 
 #### Headings, Call-to-actions, Header Navigation
-
 - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
 - Weights: 400, 700
 
