@@ -35,7 +35,7 @@ html{
 body{
     /*background-color: var(--primary-very-dark-blue);*/
     color: var(--primary-very-dark-blue);
-    padding: 4rem 13rem 4rem 13rem;
+    padding: 4rem 0 4rem 0;
 }
 a{
     /*toma el color de la clase padre*/
@@ -129,23 +129,30 @@ img{
 }
 /*bloque 2*/
 .collaboration{
-    display: flex;
+    padding-left: 4rem;
+    /*object-fit: cover;*/
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content: center;/*centrado horizontal*/
     align-items: center;/*centrado vertical*/
     gap: 4rem;
     background-color: var(--neutral-light-grayish-blue);
     padding-top: 8rem;
     width: auto;
-    background-image: url(../images/bg-curve-desktop.svg);/*mientras no tenga espacio se puede declarar sin comillas*/
+
+}
+.productive_image{
+    width: 100%;
+    height: auto;
     background-repeat: no-repeat;/*no repetir la imagen*/
-    background-position:bottom ;
-    background-size:contain ;
+    background-size: contain;
+    display: block;/*desaparecer espacio entre imagenes*/
 }
 .collaboration__image{
-    
     float: right;
     width: 40rem;
     height: 35rem;
+    
 }
 .how_works{
     display: flex;
@@ -160,4 +167,35 @@ img{
 }
 .how_works__text{
     font-family: var(--font-secondary); 
+}
+.testimonials{
+    
+    background-color: var(--neutral-light-grayish-blue);
+    padding: 2.5rem;
+    border-radius: 5px;
+    font-size: var(--font-primary);
+    line-height: 15px;
+    letter-spacing: 0.4px;
+    box-shadow: 1px 1px 10px 1px var(--neutral-light-gray);
+    width: 40%;
+    margin: 3rem;
+}
+.testimonial__text{
+    margin-bottom: 2rem;
+    line-height: 1.5;/*interlineado dimension*/
+    width: 21rem;
+    align-items: center;
+}
+.testimonial__profile{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+.testimonial__profile img{
+    border-radius: 50%;
+    width: 2rem;
+    align-items: center;
+}
+.testimonial__profile h5{
+    font-weight:var(--font-weight-regular);
 }
