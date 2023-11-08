@@ -159,6 +159,18 @@ img {/* importante para que se adapten a todos los dispositivos por la pantalla*
             var(--accent-blue)35%
         )
     ;
+    /*transition: ease-in-out;/*añade la animacion de una forma suave*/
+    transition: all 1s ease;
+}
+.hero__button:hover{
+    background: none;
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan) 35%,
+        var(--accent-blue) 100%    
+    );
+    
+    cursor: pointer;/*cambia el diseño del cursor del mouse*/
 }
 .features{
     display: grid;/*trabajar en cuadricula*/
@@ -226,7 +238,6 @@ img {/* importante para que se adapten a todos los dispositivos por la pantalla*
     display: flex;
     align-items: center;
     gap: 7px;
-
     border-bottom: 1px solid var(--accent-cyan);
     /*margin-right: auto;*/
     width: 10.8rem;
