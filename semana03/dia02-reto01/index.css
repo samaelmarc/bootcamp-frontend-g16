@@ -36,6 +36,7 @@ body{
     /*background-color: var(--primary-very-dark-blue);*/
     color: var(--primary-very-dark-blue);
     padding: 4rem 0 4rem 0;
+    align-items: center;
 }
 a{
     /*toma el color de la clase padre*/
@@ -71,6 +72,7 @@ img{
     gap: 3rem;
 }
 .hero{
+    
     flex-direction: column;
     gap: 2rem;
     padding: 8rem 0 10rem 0rem;/*espacio entre la imagen y el margen*/
@@ -82,11 +84,12 @@ img{
 }
 /*******/
 .hero__image{
+    position: relative;
     margin-top: 4rem;
     float: right;
-    width: 35rem;
-    height: 35rem;
-    /*border: 1px solid red;*/
+    width: 40rem;
+    height: 40rem;
+    right: 20rem;
 }
 .hero__title{
     /*width: 720px; aplicando la funcion para optimizar la pag por el tamaño de la pantalla*/
@@ -124,7 +127,7 @@ img{
     border-radius: 0.3rem;
     padding: 1rem 4.5rem;
     min-width:120px;
-    color: var(--neutral-light-grayish-blue);
+    color: white;
     background:var(--accent-bright-blue);
 }
 /*bloque 2*/
@@ -139,6 +142,7 @@ img{
     background-color: var(--neutral-light-grayish-blue);
     padding-top: 8rem;
     width: auto;
+    padding-bottom: 5rem;
 
 }
 .productive_image{
@@ -168,6 +172,16 @@ img{
 .how_works__text{
     font-family: var(--font-secondary); 
 }
+.how_works__button{
+    color: var(--accent-moderate-cyan);
+    font-family: var(--font-secondary);
+    font-size: var(--font-weight-regular);
+    border-bottom: 1px solid var(--accent-moderate-cyan);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 10.8rem
+}
 .testimonials{
     
     background-color: var(--neutral-light-grayish-blue);
@@ -176,15 +190,16 @@ img{
     font-size: var(--font-primary);
     line-height: 15px;
     letter-spacing: 0.4px;
-    box-shadow: 1px 1px 10px 1px var(--neutral-light-gray);
-    width: 40%;
-    margin: 3rem;
+    box-shadow: 1px 1px 10px 1px var(--primary-desaturated-blue);
+    width: 43%;
+    
 }
 .testimonial__text{
     margin-bottom: 2rem;
     line-height: 1.5;/*interlineado dimension*/
     width: 21rem;
     align-items: center;
+    white-space: initial;
 }
 .testimonial__profile{
     display: flex;
@@ -198,4 +213,112 @@ img{
 }
 .testimonial__profile h5{
     font-weight:var(--font-weight-regular);
+}
+/*tercer bloque*/
+.early--access{
+    /*border: 1px solid red;*/
+    font-family: var(--font-primary);
+    width: 100%;
+    background-color:var(--primary-desaturated-blue);
+    display: flex;
+    gap:1.5rem ;
+    height: 18rem;
+}
+
+.early--access h2{
+    color: var(--neutral-light-grayish-blue);
+    width: 35rem;
+    text-align: left;
+    font-size: 2rem;
+    padding: 4rem 0rem 0 4rem;
+    
+}
+.early--access p{
+    color: var(--neutral-light-grayish-blue);
+    position: relative;
+    
+    text-align: left;
+    width: 35rem;
+    top: 9rem;
+    right: 32rem;
+}
+.early--access form{
+    /*border: 1px solid red ;*/
+    gap: 2rem;
+}
+/*solo para celulares tables*/
+@media(max-with:768px){
+    .early--access {
+        width: 100%;
+        padding: 0 3rem;
+    }
+    .early--access form{
+        flex-direction: column;
+    }
+}
+.early--access input[type=text]{/*seleccionando al atributo de la clase input text"[]"*/
+    margin-top: 4rem;
+    border-radius: 0.2rem;
+    border: none;
+    padding: 1rem 2rem;
+    min-width: 30rem;
+}
+.early--access input[type=submit]{/*seleccionando al atributo de la clase input submit"[]"*/
+    color: var(--neutral-light-grayish-blue);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 1rem 1.5rem;
+    min-width:120px;
+    background-color: var(--accent-bright-blue);
+}
+
+.footer{
+    font-family: var(--primary-very-dark-blue);
+    color: var(--neutral-light-grayish-blue);
+    background-color: var(--primary-very-dark-blue);
+    padding: 15rem 0 5rem 0;
+    position: relative;/*se usa para enganchar otra caja para que se valla posicionando*/
+}
+.footer--wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;/*recupere su tamaño original*/
+    gap: 2rem;
+    width: 76rem;
+    margin: 0 auto;/*pone un margen automatico de igual tamaño ambos lados*/
+}
+.footer-info{
+    display: flex;
+    gap: 4rem;
+    width: 100%;
+    justify-content: space-between;/*distribuye todo el espacio de la caja con el contenido*/
+}
+/*solo para dispositvos pqueños pone uno debbajo del otro*/
+@media(max-with:768px){
+    .footer-info{
+        flex-direction: column;
+    }
+}
+.footer-info__description{
+    width: 22rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.footer-info__contact{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-info__contact span{
+    display: flex;
+    gap: 1rem;
+}
+.footer-info__links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
