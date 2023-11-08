@@ -180,7 +180,11 @@ img{
     display: flex;
     align-items: center;
     gap: 7px;
-    width: 10.8rem
+    width: 11rem
+}
+a:hover{
+    font-weight: var(--font-weight-bold);
+    
 }
 .testimonials{
     

@@ -53,7 +53,11 @@ a {
     text-decoration: none;
     /*quita el subrayado*/
 }
+a:hover{/*seudo clase que sirve para colocar efectos*/
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
 
+}
 img {/* importante para que se adapten a todos los dispositivos por la pantalla*/
     /*TODO:RWD para imagenes*/
     max-width: 100%;/*a todas las imagenes vas a ponerle un 100% al ancho del contenedor para que se adapte al dismunir el zoom*/
@@ -228,6 +232,7 @@ img {/* importante para que se adapten a todos los dispositivos por la pantalla*
     width: 10.8rem;
     padding-bottom: 0.5rem;
 }
+
 .testimonials{
     background-color: var(--primary-dark-blue-main);
     display: flex;
