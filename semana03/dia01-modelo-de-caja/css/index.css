@@ -4,29 +4,11 @@
 font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
+@import'./modules/variables.css';/* se empieza usar buenas practicas de programacion,se empeso a ordenar los css y hacer su llamado*/
 /*custom property*/
-:root {
-    /* FONTS*/
-    /*creamos una variable global--variable*/
-    --color: yellow;
-    --font-primary: 'Raleway', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
-    --font-size: 14px;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    /*COLOR*/
-    /*### Primary*/
-    --primary-dark-blue-intro: hsl(217, 28%, 15%);
-    --primary-dark-blue-main: hsl(218, 28%, 13%);
-    --primary-dark-blue-footer: hsl(216, 53%, 9%);
-    --primary-dark-blue-testimonials: hsl(219, 30%, 18%);
-    /*### Accent*/
-    --accent-cyan: hsl(176, 68%, 64%);
-    --accent-blue: hsl(198, 60%, 50%);
-    --accent-light-red: hsl(0, 100%, 63%);
-    /*### Neutral*/
-    --neutral-White: hsl(0, 0%, 100%);
-}
+@import'./modules/resets.css';
+@import'./modules/general.css';
+@impor
 
 /*RESETs para que sea compatible con cualquier navegador
 se usa el selector universal* pora tener las cajas de una sola medida y 
@@ -47,6 +29,7 @@ body {
     /*forma de hacer el llamadode una variable global var(--color)*/
     background-color: var(--primary-dark-blue-intro);
     color: var(--neutral-White);
+    position: relative;
 }
 
 a {
@@ -109,6 +92,9 @@ img {/* importante para que se adapten a todos los dispositivos por la pantalla*
     gap: 3rem;
     /*pone espaciado en los elementos*/
 }
+.header__logo{
+    width: 135px;
+}
 .hero{
 
     display: flex;
@@ -123,6 +109,11 @@ img {/* importante para que se adapten a todos los dispositivos por la pantalla*
     background-position:bottom ;
     background-size:contain ;/*la imagen  se adapte al espacio disponible*/
 
+}
+@media(max-width:768px){
+    .hero{
+        background-image: url(../images/bg-curvy-mobile.svg);
+    }
 }
 .hero__title{
     /*width: 720px; aplicando la funcion para optimizar la pag por el tamaño de la pantalla*/
@@ -415,4 +406,11 @@ img {/* importante para que se adapten a todos los dispositivos por la pantalla*
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+.top{
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background-color: #333;
+    padding: 1rem;
 }
