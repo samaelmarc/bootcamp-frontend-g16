@@ -22,11 +22,9 @@
   
   .header__nav {
     /* border: 1px solid yellow; */
-  
     list-style: none;
     padding: 10px;
     margin: 10px;
-  
     display: flex;
     gap: 3rem; /* 1rem = 14px (html) */
   }
