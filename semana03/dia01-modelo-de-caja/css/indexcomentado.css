@@ -1,0 +1,402 @@
+
+* {
+    /*aplica todos los css*/
+    box-sizing: border-box;
+    margin: 0;
+    /*para ver errores del contenedor en dispositivos mobiles se distorciona una buena practica es empezar por aqui*/
+    /*border: 1px solid red;*/
+}
+
+html {
+    font-size: var(var(--font-size));
+}
+
+body {
+    /*forma de hacer el llamadode una variable global var(--color)*/
+    background-color: var(--primary-dark-blue-intro);
+    color: var(--neutral-White);
+    position: relative;
+}
+
+a {
+    /*toma ( inherit) el color por defecto del padre "body"*/
+    color: inherit;
+    text-decoration: none;
+    /*quita el subrayado*/
+}
+a:hover{/*seudo clase que sirve para colocar efectos*/
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
+
+}
+img {/* importante para que se adapten a todos los dispositivos por la pantalla*/
+    /*TODO:RWD para imagenes*/
+    max-width: 100%;/*a todas las imagenes vas a ponerle un 100% al ancho del contenedor para que se adapte al dismunir el zoom*/
+    height: auto;
+}
+
+/*creamos un contenedor para header*/
+.wrapper {
+    /*todo adaptamos el ancho de la pagina a navegadores pc*/
+    /*width: 1440px;*/
+    /*adaptamos el ancho a paginas mobiles*/
+    /*aplicamos una funcion mas optima para el wrapper width: 1440px */
+    width:min(100% - 3rem, 1440px) ;
+    /*crea una propiedad que agerga un padding de 3 rem para que no se distorcione la pagina por otros dispositivos*/
+}
+
+.header {
+   /* border: 1px solid red;*/
+    font-family: var(--font-primary);
+    margin: 0 auto;
+    /*al poner el margen a cero y auto  termina poniendose al medio la caja*/
+    display: flex;
+    /* pone los elementos uno al lado del otro*/
+    justify-content: space-between;
+    /*mueve el ultimo elemento de manera horizontala la derecha*/
+    margin-top: 2rem;
+    /*(1rem = 16px)agregamos espaciado externo de la capa header usamos
+    rem basado en la unidad de medida de la letra que se usa 14px = 1rem pero
+    como ya esta declarado el valor en la variable font*/
+
+}
+/* acomodamos contenido para dispositivos moviles*/
+@media(max-width:768px){
+    .header{
+        flex-direction: column;
+    }
+}
+.header_nav {
+    /*border: 1px solid yellow;*/
+    list-style: none;
+    /*quitamos redondo de la lista*/
+    padding: 10px;
+    /*tamaño de la caja*/
+    margin: 10px;
+    /*separacion del margen de las cajas*/
+    display: flex;
+    gap: 3rem;
+    /*pone espaciado en los elementos*/
+}
+.header__logo{
+    width: 135px;
+}
+.hero{
+
+    display: flex;
+    flex-direction: column;/*pone los elementos debajo de cada uno*/
+    align-items: center;/*pone los items al centro*/
+    gap: 2rem;
+    padding-top: 3rem;/*espacio entre la imagen y el margen*/
+    padding-bottom: 12rem;
+
+    background-image: url(../images/bg-curvy-desktop.svg);/*mientras no tenga espacio se puede declarar sin comillas*/
+    background-repeat: no-repeat;/*no repetir la imagen*/
+    background-position:bottom ;
+    background-size:contain ;/*la imagen  se adapte al espacio disponible*/
+
+}
+@media(max-width:768px){
+    .hero{
+        background-image: url(../images/bg-curvy-mobile.svg);
+    }
+}
+.hero__title{
+    /*width: 720px; aplicando la funcion para optimizar la pag por el tamaño de la pantalla*/
+    width: min(100% - 3rem,720px);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.hero__text{
+    /*width: 720px;*/
+    width: min(100% - 3rem,720px);
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    padding: 0 7rem;
+    text-align: center;
+}
+/*aplicar tipo de media query, solo para dispositivos que tenga un tamaño menor de 768 se aplica un padding de 0*/
+/*
+576px --> pantallas pequeñas celulares
+768px --> pantallas pequeñas tablets y celulares
+992px --> pantallas medianas desktop
+1200px --> pantallas grandes desktop tvs
+*/
+@media(max-with:768px){
+    .hero__text{
+        padding: 0;
+    }
+}
+.hero__button{
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    color:var(--neutral-White);
+    border: 0;
+    border-radius: 7rem;
+    padding: 1rem 1.5rem;
+    min-width: 220px;/*indica que el boton va tener un ancho minimo*/
+    background:/*otro tipo de fondo personalizado*/
+        linear-gradient(
+            90deg, /*degradientes aplicando un angulo de los colores*/
+            var(--accent-cyan) 0%,
+            var(--accent-blue)35%
+        )
+    ;
+    /*transition: ease-in-out;/*añade la animacion de una forma suave*/
+    transition: all 1s ease;
+}
+.hero__button:hover{
+    background: none;
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan) 35%,
+        var(--accent-blue) 100%    
+    );
+    
+    cursor: pointer;/*cambia el diseño del cursor del mouse*/
+}
+.features{
+    display: grid;/*trabajar en cuadricula*/
+    grid-template-columns: 340px 340px;
+    justify-content: center;
+    gap:5rem;
+    background-color: var(--primary-dark-blue-main);
+}
+.feature{
+    /*text-align: center;*//*otra forma de centrar*/
+    display: flex;
+    flex-direction: column;
+    align-items: center ;/*prpoiedad para cambiar la posicion de elementos verticales*/
+    gap: 1rem;
+}
+/* si son pantallas de celulares/tables convierte el feature en una sola colmna*/
+@media(max-with:768px){
+    .features{
+        grid-template-columns: 340px;
+    }
+}
+.feature__title{
+    font-family: var(--font-primary);
+    /*border: 1px solid red;*/
+    /*margin-top: 1.3rem;*/
+}
+.feature__text{
+    font-family: var(--font-secondary);
+    text-align: center;
+    /*margin-top: 1.3rem;*/
+}
+.collaboration{
+    display: flex;
+    justify-content: center;/*centrado horizontal*/
+    align-items: center;/*centrado vertical*/
+    gap: 4rem;
+
+    background-color: var(--primary-dark-blue-main);
+    padding-top: 8rem;
+}
+/*transpone todo en una columna solo para celulares/tables*/
+@media(max-with:768px){
+    .collaboration{
+        flex-direction: column;
+    }
+}
+.how_works{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /*cuando llegue a valores menores a 30rem tome el 100% de la pantalla del dispositivo*/
+    width: min(100% -3rem ,30rem);
+}
+.how_works__title{
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+}
+.how_works__text{
+    font-family: var(--font-secondary); 
+}
+.how_works__button{
+    font-family: var(--font-secondary);
+    color: var(--accent-cyan);
+    /*centramos,misma linea y separacion de la imagen con el enlace*/
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-bottom: 1px solid var(--accent-cyan);
+    /*margin-right: auto;*/
+    width: 10.8rem;
+    padding-bottom: 0.5rem;
+}
+.how_works__button:hover{
+    font-weight: var(--font-weight-regular);
+    text-decoration: none;
+    color: var(--neutral-White);
+    border-bottom: 1px solid var(--neutral-White);   
+}
+/*cambiar el color de la imagen utilizando el svg*/
+.how_works__button:hover svg circle{
+    fill: white;
+}
+
+.testimonials{
+    background-color: var(--primary-dark-blue-main);
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 18rem;
+    
+}
+/*solo para celulares /table*/
+@media(max-with:768px){
+    .testimonials{
+        flex-direction: column;
+    }
+}
+.testimonial{
+    background-color: var(--primary-dark-blue-testimonials);
+    padding: 2rem 1.5rem 1.5rem 1.5rem ;
+    font-family: var(--font-primary);
+    border-radius: 0.5rem;
+    border: 7px solid rgba(222,222,222,0.1) ;
+}
+.testimonial__text{
+    margin-bottom: 2rem;
+    line-height: 1.5;/*interlineado dimension*/
+    width: min(100% -3rem, 21rem);
+}
+
+.testimonial__profile{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+.testimonial__profile img{
+    border-radius: 50%;
+}
+.testimonial__profile h5{
+    font-weight:var(--font-weight-regular);
+}
+.early--access{
+    font-family: var(--font-primary);
+    width: min(100% -3rem,53rem);
+    padding: 2rem;
+
+    background-color: var(--primary-dark-blue-testimonials);
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5rem ;
+    position: absolute;/*para que se posicione y se puede mover */
+    top:0;
+    left: 50%;
+    transform: translate(-50%,-50%);/*mover el elemento para centrar mejor*/
+    box-shadow: 3px 3px 10px #111;
+
+}
+
+.early--access h2{
+    font-size: 2rem;
+}
+.early--access p{
+    text-align: center;
+}
+.early--access form{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+/*solo para celulares tables*/
+@media(max-with:768px){
+    .early--access form{
+        flex-direction: column;
+    }
+}
+.early--access input[type=text]{/*seleccionando al atributo de la clase input text"[]"*/
+    border-radius: 1.5rem;
+    border: none;
+    padding: 1rem 2rem;
+    width: min(100% ,30rem);
+}
+.early--access input[type=submit]{/*seleccionando al atributo de la clase input submit"[]"*/
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    border: none;
+    border-radius: 7rem;
+    padding: 1rem 1.5rem;
+    min-width:120px;
+    color: var(--neutral-White);
+    background:
+        linear-gradient(
+            90deg,
+            var(--accent-cyan) 0%,
+            var(--accent-blue)35%
+        )
+    ;
+}
+/*efectos al boton Get early access*/
+.early--access input[type=submit]:hover{
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan) 35%,
+        var(--accent-blue)100%    
+    );
+    cursor: pointer;
+}
+.footer{
+    font-family: var(--font-primary);
+    background-color: var(--primary-dark-blue-footer);
+    padding: 15rem 0 5rem 0;
+    position: relative;/*se usa para enganchar otra caja para que se valla posicionando*/
+}
+.footer--wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;/*recupere su tamaño original*/
+    gap: 2rem;
+    width: min(100% - 3rem,76rem);
+    margin: 0 auto;/*pone un margen automatico de igual tamaño ambos lados*/
+}
+.footer-info{
+    display: flex;
+    gap: 4rem;
+    width: 100%;
+    justify-content: space-between;/*distribuye todo el espacio de la caja con el contenido*/
+}
+/*solo para dispositvos pqueños pone uno debbajo del otro*/
+@media(max-with:768px){
+    .footer-info{
+        flex-direction: column;
+    }
+}
+.footer-info__description{
+    width: 22rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.footer-info__contact{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-info__contact span{
+    display: flex;
+    gap: 1rem;
+}
+.footer-info__links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.top{
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background-color: #333;
+    padding: 1rem;
+}
