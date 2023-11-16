@@ -2,5 +2,5 @@
 
 ### Links
 
-* Layout: https://codescandy.com/coach/boostrap-5
+* Layout: https://codescandy.com/coach/bootstrap-5/
 * Bootstrap: https//getbootstrap.com/docs/5.3
