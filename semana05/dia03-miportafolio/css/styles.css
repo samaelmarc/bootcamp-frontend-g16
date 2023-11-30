@@ -25,5 +25,16 @@ a {
 .wrapper {
   width: min(100% - 3rem, 1220px);
   margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /*distribuye los componentes*/
   border: 1px solid red;
+}
+
+.header__logo {
+  color: #ffb742;
+  font-size: 2rem;
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
