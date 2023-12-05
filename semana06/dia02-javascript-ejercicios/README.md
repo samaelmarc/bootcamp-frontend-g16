@@ -1,4 +1,5 @@
-Reto01 - Contando ovejas para dormir
+
+### Reto01 - Contando ovejas para dormir
 /*
 Considera una lista/array de ovejas. Cada oveja tiene un nombre y un color. Haz una función que devuelva una lista con todas las ovejas que sean de color rojo y que además su nombre contenga tanto las letras n Y a, sin importar el orden, las mayúsculas o espacios.
 */
@@ -68,3 +69,9 @@ getCoins(100) // [0, 0, 0, 0, 0, 2] -> dos monedas de 50 céntimos
 
 
 https://adventjs.dev/ (2021)
+hackerrank.com
+jschallenger
+coderbyte
+hackernoon.com
+javascript30
+adventjs.dev/#retos
