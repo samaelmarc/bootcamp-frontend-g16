@@ -80,3 +80,8 @@
     left: 0;
 
 }
+.hero-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
